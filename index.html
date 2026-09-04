@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Slasher - Bleach Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1 class="game-title">SOUL<span class="highlight">SLASHER</span></h1>
+  <p class="subtitle">BLEACH EDITION - BANKAI BATTLE</p>
+
+  <!-- Form Login Awal -->
+  <div id="loginMenu" class="card">
+    <h3>REGISTRASI SHINIGAMI</h3>
+    <div class="input-group">
+      <input type="text" id="username" placeholder="Nama / Username" autocomplete="off" required>
+    </div>
+    <div class="input-group">
+      <input type="tel" id="whatsapp" placeholder="Nomor WhatsApp (Contoh: 0812...)" autocomplete="off" required>
+    </div>
+    <button class="btn-play" onclick="startGame()">BANKAI! (MULAI GAME) ⚔️</button>
+  </div>
+
+  <!-- Area Game -->
+  <div id="gameArea" style="display: none;">
+    <div class="hud">
+      <div id="scoreDisplay">REIATSU: 0</div>
+      <div id="comboDisplay">COMBO: 0x</div>
+    </div>
+    <canvas id="gameCanvas" width="340" height="460"></canvas>
+  </div>
+
+  <!-- Leaderboard -->
+  <div id="leaderboardArea" class="card">
+    <div class="lb-header">
+      <h3>🏆 SHINIGAMI LEADERBOARD</h3>
+      <button class="btn-refresh" onclick="fetchLeaderboard()">🔄 Refresh</button>
+    </div>
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Shinigami</th>
+          <th>Reiatsu (Skor)</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <tr>
+          <td colspan="3">Memuat data Soul Society...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
